@@ -8,8 +8,8 @@ import time
 start_time = time.time()
 print(f"Стартовое время: {start_time}")
 
-email = 'Kondrnikolay@gmail.com'
-password = 'AirdropFactory!Support1'
+email = ''
+password = ''
 
 chrome_options = Options()
 chrome_options.add_argument('--headless')
@@ -278,7 +278,7 @@ for device in viewports:
         chromedriver_path = '/Users/viktorushakov/PycharmProjects/screen_device/venv/bin/chromedriver'
         driver = webdriver.Chrome(service=ChromeService(chromedriver_path), options=chrome_options)
         driver.set_window_size(device['width'], device['height'])
-        driver.get(f"https://{username}:{password}@preprod.intranet.airdropfactory.app/auth/login")
+        driver.get(f"")
         time.sleep(2)
         screenshot_path = f'DevicesScreenshotsAirdrop/{device["name"]} {device["width"]}x{device["height"]} auth.png'
         driver.save_screenshot(screenshot_path)
